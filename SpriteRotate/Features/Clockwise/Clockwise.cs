@@ -1,5 +1,6 @@
 ﻿namespace SpriteRotate.Features.Hello
 {
+    using System.IO;
     using CommandLine;
     using MediatR;
     using SixLabors.ImageSharp;
@@ -50,6 +51,7 @@
                 outputImage.Mutate(ctx => ctx.DrawImage(sprite, new Point(x, newY), 1));
             }
 
+            File.Delete(request.Output);
             outputImage.SaveAsPng(request.Output);
         }
     }

@@ -1,2 +1,2 @@
 # SpriteRotate
-Base repository for a run-once CLI tool that takes multiple verbs
+Rotates each sprite in a spritesheet 90 degrees and places the rotation at the bottom of the sheet.
